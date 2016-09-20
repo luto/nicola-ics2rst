@@ -1,7 +1,6 @@
-# ice Shortag
+# ics-shortag for Nikola
 
-This plugin provides the `ics` shorttag. It converts an ICS-calendar-file provided
-via http(s) to an event list.
+This plugin provides the `ics` shorttag for the [nikola](https://getnikola.com/) static site generator. It converts an ICS-calendar-file provided via http(s) to an event list.
 
 ## Usage
 
