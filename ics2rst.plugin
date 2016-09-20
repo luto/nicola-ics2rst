@@ -1,0 +1,11 @@
+[Core]
+Name = ics2rst
+Module = ics2rst
+
+[Nikola]
+Compiler = rest
+
+[Documentation]
+Author = Michael Lutonsky
+Version = 0.1
+Description = generate event list based on a ics url
