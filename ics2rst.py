@@ -5,6 +5,7 @@ import io
 import icalendar
 import datetime
 import traceback
+from urllib.parse import urlparse
 
 from docutils import nodes
 from docutils.parsers.rst import Directive, directives
@@ -16,8 +17,12 @@ import nikola
 
 
 def get_ics_content(url):
-  r = requests.get(url)
-  ics = r.text
+  if urlparse(url).scheme == 'file':
+    with open(url) as f:
+      ics = f.read()
+  else:
+    r = requests.get(url)
+    ics = r.text
 
   cal = icalendar.Calendar.from_ical(ics)
 
